@@ -32,7 +32,7 @@ def pahereq():
         judul = request.args.get('q')
         try:
             parse = pahe(judul)
-            return parse
+            return str(parse)
         except Exception as err:
             return str(err)
     else:
