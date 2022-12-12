@@ -36,7 +36,7 @@ def root():
 @app.route('/subscene')
 def subscenereq():
     parse = subscene()
-    return str(parse)
+    return parse
 
 @app.route('/pahe')
 def pahereq():
