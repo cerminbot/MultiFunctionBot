@@ -18,7 +18,9 @@ def pahe(title: str) -> str:
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(f"https://pahe.li/?s={title}")
     result = driver.page_source
-    return result
+    parse = BeautifulSoup(result, "lxml")
+    driver.quit()
+    return parse
 
 @app.route('/')
 def root():
@@ -29,7 +31,7 @@ def pahereq():
     if request.args.get('q'):
         judul = request.args.get('q')
         try:
-            parse = BeautifulSoup(pahe(judul), "lxml")
+            parse = pahe(judul)
             return parse
         except Exception as err:
             return str(err)
