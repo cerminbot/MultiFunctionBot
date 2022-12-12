@@ -1,0 +1,19 @@
+x-uffizzi:
+  ingress:
+    service: web
+    port: 80
+    
+services:
+  web:
+    build: .
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+    secrets:
+      - config
+
+secrets:
+  config:
+    external: true
+    name: "CONFIG_FILE_URL"
