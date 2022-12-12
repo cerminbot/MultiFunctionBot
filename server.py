@@ -18,7 +18,6 @@ def pahe(title: str) -> str:
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(f"https://pahe.li/?s={title}")
     result = driver.page_source
-    driver.quit()
     return result
 
 @app.route('/')
