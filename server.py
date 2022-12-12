@@ -11,7 +11,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 def pahe(title: str) -> str:
-    chromedriver_autoinstaller.install()
+    # chromedriver_autoinstaller.install()
 
     AGREE_BUTTON = "//*[contains(text(), 'AGREE')]"
     LINK_TYPE = ["//*[contains(text(), 'GD')]"]
@@ -38,8 +38,11 @@ def root():
 def pahe():
     if request.args.get('q'):
         judul = request.args.get('q')
-        parse = pahe(judul)
-        return str(parse)
+        try:
+            parse = pahe(judul)
+            return str(parse)
+        except Exception as err:
+            return str(err)
     else:
         return {
             'success': False,
