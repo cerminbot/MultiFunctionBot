@@ -19,7 +19,7 @@ def pahe(title: str) -> str:
     driver.get(f"https://pahe.li/?s={title}")
     return driver.page_source
 
-def subscene() -> str:
+def subscene():
     options = Options()
     options.add_argument("start-maximized")
     options.add_argument("disable-dev-shm-usage")
@@ -35,7 +35,7 @@ def root():
 
 @app.route('/subscene')
 def subscene():
-    parse = subscene(judul)
+    parse = subscene()
     return str(parse)
 
 @app.route('/pahe')
