@@ -33,7 +33,7 @@ def pahereq():
             DATA = []
             parse = pahe(judul)
             for i in parse.findAll(class_="post-box-title"):
-                link = i.find("a").href
+                link = i.find("a").get("href")
                 judul = i.find("a").text
                 DATA.append({"judul": judul, "link": link})
             return {
@@ -48,8 +48,8 @@ def pahereq():
             DATA = []
             parse = pahe(judul)
             for i in parse.findAll(class_="post-box-title"):
-                link = "ss"
-                judul = "xx"
+                link = i.find("a").get("href")
+                judul = i.find("a").text
                 DATA.append({"judul": judul, "link": link})
             return {
                 "success": True,
