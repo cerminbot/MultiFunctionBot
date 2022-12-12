@@ -30,8 +30,17 @@ def pahereq():
     if request.args.get('q'):
         judul = request.args.get('q')
         try:
+            DATA = []
             parse = pahe(judul)
-            return str(parse.findAll(class_="post-box-title"))
+            for i in parse.findAll(class_="post-box-title")
+                return str(i.text)
+            return {
+                "success": True,
+                "result": {
+                    "judul": 
+                }
+                "info": "Join telegram channel @YasirPediaChannel for updates."
+            }
         except Exception as err:
             return str(err)
     else:
