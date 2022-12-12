@@ -35,10 +35,11 @@ def pahereq():
             for i in parse.findAll(class_="post-box-title"):
                 link = "ss"
                 judul = i.text
-                DATA.append({"judul": judul, "link": link})
+                re = str(i)
+                DATA.append({"judul": judul, "link": link, "re": re})
             return {
                 "success": True,
-                "result": DATA
+                "result": DATA,
                 "info": "Join telegram channel @YasirPediaChannel for updates."
             }
         except Exception as err:
