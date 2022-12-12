@@ -31,7 +31,7 @@ def pahereq():
         judul = request.args.get('q')
         try:
             parse = pahe(judul)
-            return parse.findAll(class_="post-box-title")
+            return str(parse.findAll(class_="post-box-title"))
         except Exception as err:
             return str(err)
     else:
