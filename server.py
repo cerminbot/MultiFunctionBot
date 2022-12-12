@@ -34,7 +34,7 @@ def root():
     return "MultiFunction Bot is Up & Running!"
 
 @app.route('/subscene')
-def subscene():
+def subscenereq():
     parse = subscene()
     return str(parse)
 
