@@ -17,7 +17,7 @@ def pahe(title: str) -> str:
     options.add_argument("headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(f"https://pahe.li/?s={title}")
-    parse = BeautifulSoup(driver.page_source, "html.parse")
+    parse = BeautifulSoup(driver.page_source, "lxml")
     driver.quit()
     return parse
 
