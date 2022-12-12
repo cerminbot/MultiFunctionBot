@@ -35,7 +35,7 @@ def root():
     return "MultiFunction Bot is Up & Running!"
 
 @app.route('/pahe')
-def pahereq(request):
+def pahereq():
     if request.args.get('q'):
         judul = request.args.get('q')
         try:
