@@ -17,8 +17,7 @@ def pahe(title: str) -> str:
     options.add_argument("headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(f"https://pahe.li/?s={title}")
-    result = driver.page_source
-    parse = BeautifulSoup(result, "lxml")
+    parse = BeautifulSoup(driver.page_source, "html.parse")
     driver.quit()
     return parse
 
@@ -32,7 +31,7 @@ def pahereq():
         judul = request.args.get('q')
         try:
             parse = pahe(judul)
-            return str(parse)
+            return parse.findAll(class_="post-box-title")
         except Exception as err:
             return str(err)
     else:
