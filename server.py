@@ -17,36 +17,21 @@ def pahe(title: str) -> str:
     options.add_argument("headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(f"https://pahe.li/?s={title}")
-    return driver.page_source
-
-def subscene():
-    options = Options()
-    options.add_argument("start-maximized")
-    options.add_argument("disable-dev-shm-usage")
-    options.add_argument("no-sandbox")
-    options.add_argument("headless")
-    options.add_argument('ignore-ssl-errors=yes')
-    options.add_argument('ignore-certificate-errors')
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    driver.get(f"https://subscene.com")
-    return driver.page_source
+    result = driver.page_source
+    driver.quit()
+    return result
 
 @app.route('/')
 def root():
     return "MultiFunction Bot is Up & Running!"
-
-@app.route('/subscene')
-def subscenereq():
-    parse = subscene()
-    return parse
 
 @app.route('/pahe')
 def pahereq():
     if request.args.get('q'):
         judul = request.args.get('q')
         try:
-            parse = pahe(judul)
-            return str(parse)
+            parse = BeautifulSoup(pahe(judul), "lxml")
+            return parse
         except Exception as err:
             return str(err)
     else:
