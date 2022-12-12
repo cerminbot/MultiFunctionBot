@@ -28,7 +28,7 @@ def pahe(title: str) -> str:
     chrome_options.add_argument("--headless")
     wd = webdriver.Chrome("/usr/src/app/chromedriver", chrome_options=chrome_options)
     wd.get(f"https://pahe.li/?s={title}")
-    retun wd.page_source
+    return wd.page_source
 
 @app.route('/')
 def root():
