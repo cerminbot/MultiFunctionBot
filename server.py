@@ -19,9 +19,24 @@ def pahe(title: str) -> str:
     driver.get(f"https://pahe.li/?s={title}")
     return driver.page_source
 
+def subscene() -> str:
+    options = Options()
+    options.add_argument("start-maximized")
+    options.add_argument("disable-dev-shm-usage")
+    options.add_argument("no-sandbox")
+    options.add_argument("headless")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver.get(f"https://subscene.com")
+    return driver.page_source
+
 @app.route('/')
 def root():
     return "MultiFunction Bot is Up & Running!"
+
+@app.route('/subscene')
+def subscene():
+    parse = subscene(judul)
+    return str(parse)
 
 @app.route('/pahe')
 def pahereq():
