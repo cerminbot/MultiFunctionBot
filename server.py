@@ -27,8 +27,25 @@ def root():
 
 @app.route('/pahe')
 def pahereq():
+    judul = request.args.get('q') else ""
     if request.args.get('q'):
-        judul = request.args.get('q')
+        try:
+            DATA = []
+            parse = pahe(judul)
+            for i in parse.findAll(class_="article"):
+                link = "ss"
+                judul = "xx"
+                description = "xx"
+                re = str(i)
+                DATA.append({"judul": judul, "link": link, "re": re})
+            return {
+                "success": True,
+                "result": DATA,
+                "info": "Join telegram channel @YasirPediaChannel for updates."
+            }
+        except Exception as err:
+            return str(err)
+    else:
         try:
             DATA = []
             parse = pahe(judul)
@@ -45,11 +62,5 @@ def pahereq():
             }
         except Exception as err:
             return str(err)
-    else:
-        return {
-            'success': False,
-            'msg': 'Isi parameter query, ex: https://yasirapi.eu.org/yt-search?q=scraping%20tutorial',
-            'info': 'Join telegram channel @YasirPediaChannel for updates.',
-        }
 
 app.run(host="0.0.0.0", port=os.environ.get("PORT", 80))
