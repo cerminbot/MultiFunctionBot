@@ -50,4 +50,4 @@ def pahe():
             'info': 'Join telegram channel @YasirPediaChannel for updates.',
         }
 
-app.run(host="0.0.0.0", port=os.environ.get("PORT", 8080))
+app.run(host="0.0.0.0", port=os.environ.get("PORT", 80))
