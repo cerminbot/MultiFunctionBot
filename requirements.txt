@@ -24,3 +24,4 @@ telegraph
 tgcrypto
 urllib3
 waybackpy
+webdriver_manager
