@@ -16,4 +16,4 @@ services:
 secrets:
   config:
     external: true
-    name: "CONFIG_FILE_URL"
+    name: "CONFIG_ENV_URL"
