@@ -27,11 +27,12 @@ def root():
 
 @app.route('/pahe')
 def pahereq():
-    judul = request.args.get('q') else ""
+    judul = request.args.get('q') if request.args.get('q') else ""
     if request.args.get('q'):
         try:
             DATA = []
             parse = pahe(judul)
+            print(parse)
             for i in parse.findAll(class_="article"):
                 link = "ss"
                 judul = "xx"
