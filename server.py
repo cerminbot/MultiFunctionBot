@@ -32,7 +32,6 @@ def pahereq():
         try:
             DATA = []
             parse = pahe(judul)
-            print(parse)
             for i in parse.findAll(class_="post-box-title"):
                 link = "ss"
                 judul = i.find("a")
