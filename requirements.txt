@@ -20,9 +20,7 @@ python-telegram-bot
 requests
 sapling-py
 selenium
-speedtest-cli
 telegraph
 tgcrypto
 urllib3
 waybackpy
-yt_dlp

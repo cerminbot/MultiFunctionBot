@@ -52,10 +52,9 @@ direct - Get Direct Link for various Supported URLs
 bypass - Bypass Various Supported Shortened URLs
 multi - Bypass Short Links using PyBypass Library
 shorten - Get AdFree Shortened URLs of your Link
-magnet - Extract Magnet from Torrent Websites
 index - Extract Direct Links from Bhadoo Index Folder URLs
 scrape - Extract Direct Links from Supported Sites
-ytdl - (or /ytdlp) Extract DL Links using YT-DLP
+ytdl - (or /ytdlp) Extract DL Links using YTDLP
 gd - (or use /clone) Get GDrive Links for various Drive File Sharer
 ```
 
@@ -78,17 +77,15 @@ gd - (or use /clone) Get GDrive Links for various Drive File Sharer
     /bypass - Bypass Various Supported Shortened URLs <br>
     /multi - Bypass Short Links using PyBypass Library <br>
     /shorten - Get AdFree Shortened URLs of your Link <br>
-    /magnet - Extract Magnet from Torrent Websites <br>
     /index - Extract Direct Links from Bhadoo Index Folder URLs <br>
     /scrape - Extract Direct Links from Supported Sites <br>
-    /ytdl - (or /ytdlp) Extract DL Links using YT-DLP <br>
+    /ytdl - (or /ytdlp) Extract DL Links using YTDLP <br>
     /gd - (or use /clone) Get GDrive Links for various Drive File Sharer <br>
 	</li>
 <br>
     <li>
     <i><b>Sudo User Commands </b></i><br><br>
     /db: Get information about Bot DataBase <br>
-    /speedtest: Check the internet speed of bot server.<br>
     /serverstats: Get the stats of server.<br>
     /stats: Alias command for serverstats.<br>
     /users - Get details about the Bot Users <br>
@@ -123,7 +120,7 @@ gd - (or use /clone) Get GDrive Links for various Drive File Sharer
 
 # Contributions - 
 - Thanks to [Sanjit Sinha](https://github.com/sanjit-sinha) for [Telegram-Bot-Boilerplate](https://github.com/sanjit-sinha/Telegram-Bot-Boilerplate) Template
-- Thanks to [Yukki Senpai](https://github.com/xcscxr) for Bypassers as well as GDrive Sharer Directs
+- Thanks to [Yuki Senpai](https://github.com/xcscxr) for Bypassers as well as GDrive Sharer Directs
 - Thanks to [Jack](https://github.com/JohnWickKeanue) for Site Scraping Scripts
 - Thanks to [Miss Emily](https://github.com/missemily22) for maintaining the Repo as well as the API
 - Thanks to [zevtyardt](https://github.com/zevtyardt/lk21) for LK21 Bypasser
@@ -157,7 +154,7 @@ gd - (or use /clone) Get GDrive Links for various Drive File Sharer
 <p><b><code>brew install flyctl</code></b></p>
 <p><b><i>Windows Powershell:</i></b></p>
 <p><b><code>iwr https://fly.io/install.ps1 -useb | iex</code></b></p>
-<p><b><i>Termux:</i> (Refer <a href="https://github.com/TheCaduceus/CloneBot_V2/discussions/54">#54</a>)</b></p>
+<p><b><i>Termux:</i></b></p>
 <p><b><code>pkg install flyctl</code></b></p>
 <h4><b>3.Download MultiFunctionBot Repository:</b></h4>
 <p><b><code>git clone https://github.com/missemily22/MultiFunctionBot</code></b></p>

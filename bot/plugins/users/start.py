@@ -58,13 +58,9 @@ USER_TEXT = """🗒️ Documentation for commands available to user's
 
 • /shorten - Get AdFree Shortened URLs of your Link
 
-• /magnet - Extract Magnet from Torrent Websites
-
 • /index - Extract Direct Links from Bhadoo Index Folder URLs
 
 • /scrape - Extract Direct Links from Supported Sites
-
-• /ytdl - (or /ytdlp) Extract DL Links using YT-DLP
 
 • /gd - (or use /clone) Get GDrive Links for various Drive File Sharer
 """
@@ -73,8 +69,6 @@ SUDO_TEXT = """
 🗒️ Documentation for Sudo Users commands.
 
 • /db: Get information about Bot DataBase
-
-• /speedtest: Check the internet speed of bot server
 
 • /serverstats: Get the stats of server
 
