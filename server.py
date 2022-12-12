@@ -38,8 +38,8 @@ def root():
 def pahe():
     if request.args.get('q'):
         judul = request.args.get('q')
-        parse = BeautifulSoup(pahe(judul), "lxml")
-        return parse
+        parse = pahe(judul)
+        return str(parse)
     else:
         return {
             'success': False,
