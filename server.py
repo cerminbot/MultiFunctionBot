@@ -33,12 +33,12 @@ def pahereq():
             DATA = []
             parse = pahe(judul)
             for i in parse.findAll(class_="post-box-title")
-                return str(i.text)
+                link = "ss"
+                judul = i.text
+                DATA.append({"judul": judul, "link": link})
             return {
                 "success": True,
-                "result": {
-                    "judul": 
-                }
+                "result": DATA
                 "info": "Join telegram channel @YasirPediaChannel for updates."
             }
         except Exception as err:
